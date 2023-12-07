@@ -11,7 +11,7 @@ class StartingDataset(torch.utils.data.Dataset):
 
     def __init__(self, training_set = True):
 
-        file_path = '/home/prateiksinha/rainbench_finetune/data/rainbow.npy'
+        file_path = '/home/prateiksinha/rainbow_final/data/rainbow'
         self.data = np.load(file_path)
 
         # Get indices that are 1's 
@@ -61,7 +61,7 @@ class StartingDataset(torch.utils.data.Dataset):
         self.dt_str = datetime(2004, 1, 1, 0, 0, 0)
         self.dt_end = datetime(2013, 12, 19, 0, 0, 0)
 
-        self.data_root_dir = '/localhome/data/datasets/climate/era5/1.40625_npz/train'
+        self.data_root_dir = '/home/prateiksinha/rainbow_final/data/climaX_outputs'
         self.desired_vars = ["u_component_of_wind_100",
                             "u_component_of_wind_250",
                             "u_component_of_wind_500",
